@@ -16,12 +16,10 @@ public class CustomerserviceApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(CustomerserviceApplication.class, args);
-
     }
 
     @Bean
     CommandLineRunner runner(CustomerRepository customerRepository){
-
         return  args -> {
             var faker = new Faker();
             Random random = new Random();
