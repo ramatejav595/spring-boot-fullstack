@@ -36,6 +36,8 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
           cache: 'maven'
+      - name: Skip test cases
+        run: mvn clean install -DskipTests
       - name: Build and run with Maven
         run: mvn -ntp -B verify
 
