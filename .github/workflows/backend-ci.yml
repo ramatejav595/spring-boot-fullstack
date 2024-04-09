@@ -34,7 +34,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           distribution: 'temurin'
-          java-version: '21'
+          java-version: '17'
           cache: 'maven'
       - name: Build and run with Maven
         run: mvn -ntp -B verify
