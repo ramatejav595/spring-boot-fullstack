@@ -1,0 +1,23 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "customerservice",
+      "image": "ramateja59/customerservice:latest",
+      "essential": true,
+      "memory": 512,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 8080
+        }
+      ],
+      "environment": [
+        {
+          "name":"SPRING_DATASOURCE_URL",
+          "value":"jdbc:postgresql://awseb-e-i3jnd2ny83-stack-awsebrdsdatabase-jjrz0ypxzfrd.cdcc46ia8rb0.us-east-1.rds.amazonaws.com:5432/customer"
+        }
+      ]
+    }
+  ]
+}
