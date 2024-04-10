@@ -20,7 +20,6 @@ public class CustomerserviceApplication {
 
     @Bean
     CommandLineRunner runner(CustomerRepository customerRepository){
-
         return  args -> {
             var faker = new Faker();
             Random random = new Random();
