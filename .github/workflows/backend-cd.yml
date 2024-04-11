@@ -68,6 +68,8 @@ jobs:
         run: ls -l
       - name: Print Dockerrun.aws.json content
         run: cat Dockerrun.aws.json
+      - name: Print Dockerrun.aws.json content
+        run: pwd
        
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v21
