@@ -55,7 +55,7 @@ jobs:
           docker build -t customerservice:${{ steps.build-number.outputs.BUILD_NUMBER }} .
           docker tag customerservice:${{ steps.build-number.outputs.BUILD_NUMBER }} ramateja59/customerservice:${{ steps.build-number.outputs.BUILD_NUMBER }}
           docker push ramateja59/customerservice:${{ steps.build-number.outputs.BUILD_NUMBER }}
-        
+          docker images
 
       - name: Update Dockerrun.aws.json with build name
         run: |
