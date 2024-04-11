@@ -66,6 +66,9 @@ jobs:
           cat Dockerrun.aws.json
       - name: List files in root directory
         run: ls -l
+      - name: Print Dockerrun.aws.json content
+        run: cat Dockerrun.aws.json
+
 
       - name: Print Dockerrun.aws.json content
         run: cat Dockerrun.aws.json
