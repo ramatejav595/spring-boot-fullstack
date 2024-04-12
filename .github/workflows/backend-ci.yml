@@ -41,5 +41,12 @@ jobs:
       - name: Build and run with Maven
         run: mvn -ntp -B verify
 
+    # Upload artifact
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: customerservice-jar
+          path: ./backend/target/customerservice-0.0.1-SNAPSHOT.jar
+
 
 
